@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite name="Cucumber" time="50.797" tests="9" skipped="0" failures="0" errors="0">
+<testcase classname="User Login" name="Successful Login - Example #1.1" time="6.283">
+<system-out><![CDATA[
+Given the user is on the login page.........................................passed
+When the user enters valid "mopoj20050@undewp.com" and "HU6r4th3aPHaQ@".....passed
+And clicks the Login button.................................................passed
+Then the user should be redirected to the Homepage..........................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="Unsuccessful Login (Invalid Credentials)" time="4.003">
+<system-out><![CDATA[
+Given the user is on the login page.........................................passed
+When the user enters an invalid username "mopoj20050@undewpasd.com" and password "HU6r4th3aPHaQ@sadf".passed
+And clicks the Login button.................................................passed
+Then the user should see an error message...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="Unsuccessful Login (Empty Fields)" time="14.762">
+<system-out><![CDATA[
+Given the user is on the login page.........................................passed
+When the user leaves the username and password fields empty.................passed
+And clicks the Login button.................................................passed
+Then the user should see a message indicating that fields are required......passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="Password Reset" time="4.543">
+<system-out><![CDATA[
+Given the user is on the login page.........................................passed
+When the user clicks the Forgot Password link...............................passed
+Then the user should be redirected to the password reset page...............passed
+And the user should see a form for resetting the password...................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registration" name="Successful User Registration" time="4.733">
+<system-out><![CDATA[
+Given the user is on the registration page..................................passed
+When the user fills in the registration form with valid mandatory information.passed
+And click the privacy policy check box......................................passed
+And clicks the continue button..............................................passed
+Then the user should see a confirmation message.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registration" name="Unsuccessful User Registration (Invalid Data)" time="4.701">
+<system-out><![CDATA[
+Given the user is on the registration page..................................passed
+When the user fills in the registration form with invalid mandatory information.passed
+And click the privacy policy check box......................................passed
+And clicks the continue button..............................................passed
+Then the user should see an invalid error message...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search Functionality" name="User Searches for a valid product" time="3.908">
+<system-out><![CDATA[
+Given User is on the Home page..............................................passed
+When User enters the valid product "iphone" in the search field.............passed
+And User clicks on the search button........................................passed
+Then User should get valid product displayed in search result...............passed
+]]></system-out>
+</testcase>
+<testcase classname="Search Functionality" name="User Searches for a invalid product" time="3.797">
+<system-out><![CDATA[
+Given User is on the Home page..............................................passed
+When User enters the invalid product "Honda" in the search field............passed
+And User clicks on the search button........................................passed
+Then User should get message as no product matching.........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search Functionality" name="User Searches without any product" time="3.843">
+<system-out><![CDATA[
+Given User is on the Home page..............................................passed
+When User dont enter any product in the search field........................passed
+And User clicks on the search button........................................passed
+Then User should get message as no product matching.........................passed
+]]></system-out>
+</testcase>
+</testsuite>
